@@ -1,44 +1,31 @@
 /* Add some css styles based on the tutorial at javascript.info: introduction to browser events
  https://javascript.info/introduction-browser-events */
-
-
- html, body {
-    margin: 0;
-    padding: 0;
-  }
   
   html {
-    font-size: 10px;
-  
+    font-size: 10px;  
   }
   
   body {
-    /*width: 70%;
-    min-width: 800px;
-    margin: 0 auto;*/
-    background-color: #6091C3;
+    padding: 10px;
+    background-color: #7e3d3d;
   }
   
-  .arrow:hover {
-  background: #ccc;
-  cursor: pointer;
-}
+  .carousel{
+      position: relative;
+      width: 398px;
+      padding: 10px 40px;
+      border: 1px solid rgb(11, 73, 143);
+      border-radius: 25px;
+      background: #eee;
+  }
 
-  ul {
-  height: 130px;
-  width: 9999px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 0;
-}
+  .carousel img{
+      width: 130px;
+      height: 130px;
+  }
 
-ul img {
-  width: 130px;
-  height: 130px;
-  display: block; /* removes extra space near images */
-}
-
-ul li {
-  display: inline-block; /* removes extra space between list items
-}
+  .arrow {
+      position: absolute;
+      top: 60px;
+      padding 0;
+  }
