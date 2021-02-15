@@ -1,1 +1,35 @@
 
+.game-container {
+    width: 500px;
+    height: 730px;
+    position: absolute; /* whatever Parent div, this div
+                            is in we will position it based on thes
+                            dimension and position   */
+    
+}
+
+.sky {
+    background-color: blue;
+    width: 500px;
+    height: 580px;
+    position: absolute;
+}
+
+.ground{
+    background-color: brown;
+    width: 500px;
+    height: 150px; /* 730px - 580px = height of our sky fits in the remaining space of our 
+                    game container*/
+    position: absolute; /* Relative to the game container because that is the parent element. */
+    top: 580px;
+
+}
+
+.bird {
+    background-color: yellow;
+    position: absolute;
+    width: 60px;
+    height: 45px;
+    
+
+}
