@@ -1,12 +1,45 @@
 
+body {
+    display: flex;
+}
+
 .game-container {
     width: 500px;
     height: 730px;
     position: absolute; /* whatever Parent div, this div
                             is in we will position it based on thes
                             dimension and position   */
+    left: 80px;
     
 }
+
+.border-Left{
+    width: 80px;
+    height: 790px;
+    position: absolute;
+    background-color: white;
+    z-index: +2;
+}
+
+.border-Right{
+    width: 80px;
+    height: 790px;
+    position: absolute;
+    background-color: white;
+    z-index: +2;
+    left: 580px;
+}
+
+.border-Top{
+    width: 660px;
+    height: 50px;
+    position: absolute;
+    background-color: white;
+    z-index: +2;
+    left: 580px;
+    top: -50px;
+}
+
 
 .sky {
     background-color: blue;
@@ -22,6 +55,7 @@
                     game container*/
     position: absolute; /* Relative to the game container because that is the parent element. */
     top: 580px;
+    z-index: +1
 
 }
 
@@ -29,8 +63,7 @@
     background-image: url('images/flappy-bird.png');
     position: absolute;
     width: 60px;
-    height: 45px;
-    
+    height: 45px;    
 
 }
 
