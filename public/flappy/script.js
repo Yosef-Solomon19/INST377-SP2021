@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded' , () => {
       }
       if (
         obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220 &&
-        birdBottom < obstacleBottom + 150 ||
-        birdBottom === 0 ) {
+        (birdBottom < obstacleBottom + 150 || birdBottom > obstacleBottom + gap - 200) ||
+        birdBottom === 0 ) { 
         gameOver()
         clearInterval(timerId)
       }
