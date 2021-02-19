@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded' , () => {
   function generateObstacle() {
     let obstacleLeft = 500;
     /* Genereate obstacle at random intervals and at random heights. */
-    let randomHeight = Math.random() * 60;    
+    let randomHeight = Math.random() * 60;
     let obstacleBottom = randomHeight;
     const obstacle = document.createElement('div')
     const topObstacle = document.createElement('div')
@@ -66,15 +66,15 @@ document.addEventListener('DOMContentLoaded' , () => {
       }
       if (
         obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220 &&
-        (birdBottom < obstacleBottom + 150 || birdBottom > obstacleBottom + gap - 200) ||
-        birdBottom === 0 ) { 
-        gameOver()
+        (birdBottom < obstacleBottom + 145 || birdBottom > obstacleBottom + gap - 190) ||
+        birdBottom === 0 ) {
+        gameOver() 
         clearInterval(timerId)
       }
 
     }
     let timerId = setInterval(moveObstacle, 20);  
-    if (!isGameover) setTimeout(generateObstacle, 3000) /* Random obstacles generating 
+    if (!isGameOver) setTimeout(generateObstacle, 3000) /* Random obstacles generating 
                                        at random intervals with varying height */
   }
   generateObstacle()
