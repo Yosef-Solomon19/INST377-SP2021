@@ -18,8 +18,8 @@
   
   .user-form-submission {
     text-align: center;
-    background-color: #b0b4b8;
-    border: 1px solid #D6D9DC;
+    background-color: #419741;
+    border: 1px solid #419741;
     border-radius: 3px;
     
     width: 80%;
@@ -32,9 +32,9 @@
     margin-bottom: 20px;
   }
 
-  .speaker-form {
-    background-color: #F6F7F8;
-    border: 1px solid #D6D9DC;
+  .user-form {
+    background-color: #419741;
+    border: 1px solid #419741;
     border-radius: 3px;
     
     width: 80%;
@@ -84,3 +84,29 @@
       padding-right: 20px;
     }
   }
+
+  /* Change this rule */
+.form-row input[type='text'] {
+  background-color: #FFFFFF;
+  /* ... */
+}
+
+/* To have another selector */
+.form-row input[type='text'],
+.form-row input[type='email'] {
+  background-color: #FFFFFF;
+  margin-top: 6px;
+  /* ... */
+}
+
+@media only screen and (min-width: 700px) {
+  /* ... */
+  .form-row input[type='text'],
+  .form-row input[type='email'],    /* Add */
+  .form-row select,                 /* These */
+  .form-row textarea {              /* Selectors */
+    width: 250px;
+    height: initial;
+  }
+  /* ... */
+}
