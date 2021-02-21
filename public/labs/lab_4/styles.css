@@ -69,6 +69,27 @@ body {
   margin-bottom: 1px;
 }
 
+/* Text Area */
+/* Question: How do you vertically align the lable for the text field ?? */
+.form-row textarea {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+
+  border: 1px solid #D6D9DC;
+  border-radius: 1px;
+  width: 900px;
+
+  min-height: 200px;
+  margin-bottom: 10px;
+  padding: 7px;
+  resize: none;
+  
+}
+
+
+
+
+
 /* Tweak base styles for desktop layout via media query */
 @media only screen and (min-width: 700px) {
   .speaker-form-header,
@@ -92,6 +113,8 @@ body {
     margin-top: 7px;
     padding-right: 20px;
   }
+  .form-row .instructions {
+    margin-left: 120px;
 }
 
-/* Phone input fields */
+/* Text Area */
