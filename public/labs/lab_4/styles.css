@@ -19,7 +19,7 @@ body {
 .user-form-submission {
   text-align: center;
   background-color: #419741;
-  border: 1px solid #ffffff;
+  border: 1px solid #419741;
   border-radius: 3px;
   
   width: 80%;
@@ -36,7 +36,7 @@ body {
 /* Styling Forms */
 .user-form {
   background-color: #419741;
-  border: 1px solid #ffffff;
+  border: 1px solid #419741;
   color: white;
   border-radius: 3px;
   
