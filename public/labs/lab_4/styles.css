@@ -124,16 +124,27 @@ body {
   }
 }
 
-/* Text Area */
-/* Checkboxes */
-/*
-.form-row .checkbox-label {
-  margin-bottom: 0; 
-  margin-left: 390px;
-  align-self: center;
-  
-   
-}
-*/
 
+/* Submit Button  */
+.form-row button {
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #000000;
+  background-color: #dadada;
+
+  border: none;
+  border-radius: 3px;
+
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+.form-row button:hover {
+  background-color: #76AEED;
+}
+
+.form-row button:active {
+  background-color: #407FC7;
+}
 
