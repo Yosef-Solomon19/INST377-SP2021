@@ -81,14 +81,9 @@ body {
 
   min-height: 200px;
   margin-bottom: 10px;
-  padding: 7px;
-  
+  padding: 7px;  
   
 }
-
-
-
-
 
 
 /* Tweak base styles for desktop layout via media query */
@@ -129,6 +124,7 @@ body {
 .form-row button {
   font-size: 16px;
   font-weight: bold;
+  
 
   color: #000000;
   background-color: #dadada;
