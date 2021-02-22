@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions */
-describe('Lab 4', () => {
+describe('labs/lab_4', () => {
   it('Successfully loads with valid HTML', () => {
     cy.fixture('test_values').then((json) => {
       const labUrl = `${json.test_context || ''}labs/lab_4/`;
