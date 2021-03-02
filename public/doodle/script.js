@@ -5,12 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
   let doodlerBottomSpace = 150;
   let platformCount = 5;
   let isGameOver = false;
+  let platforms = []
 
   function createDoodler() {
     grid.appendChild(doodler);
     doodler.classList.add("doodler");
     doodler.style.left = doodlerLeftSpace + "px";
     doodler.style.bottom = doodlerBottomSpace + "px";
+    
   }
 
   class Platform {
@@ -32,6 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
       let platformGap = 600 / platformCount;
       let newPlatBottom = 100 + i * platformGap;
       let newPlatform = new Platform(newPlatBottom);
+      platforms.push(newPlatform);
+      console.log(platforms);
     }
   }
 
@@ -41,6 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
       createPlatforms();
     }
   }
-  // Attact a button to start
+  // Attatch a button to start
   start();
 });
