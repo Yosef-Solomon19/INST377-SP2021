@@ -12,10 +12,10 @@ h1,h2,h3 {
   color: aliceblue;
 }
 
+
 .description {
   display: inline-flex;
-  color: aliceblue;
-}
+  color: aliceblue;}
 
 
 body {
@@ -35,4 +35,11 @@ body {
 .search-form {
   display: inline-flex;
 }
+
+
+
+
+
+
+
 
