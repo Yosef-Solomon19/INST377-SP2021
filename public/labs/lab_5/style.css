@@ -12,10 +12,14 @@ h1,h2,h3 {
   color: aliceblue;
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 .description {
   display: inline-flex;
-  color: aliceblue;}
+  color: aliceblue;
+}
 
 
 body {
@@ -27,19 +31,31 @@ body {
 
 }
 
-
 #mapid {
     height: 480px;
 }
 
 .search-form {
-  display: inline-flex;
+  display: inline-block;  
+}
+.recommendations {
+  margin: 0;
+  padding: 0;
+  
+  
 }
 
+.recommendations li {
+  flex-direction: column;
+  list-style: none;
+  color: aliceblue; 
+  margin: 0;
+  padding: 10px;
+  transition: background 0.2s;
+  display: flex;
+  
+}
 
-
-
-
-
-
-
+span.title {  
+  color: rgb(203, 207, 211);
+}

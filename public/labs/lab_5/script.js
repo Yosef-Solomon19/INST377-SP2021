@@ -10,7 +10,10 @@ function mapInit() {
     tileSize: 512,
     zoomOffset: -1,
     accessToken: 'pk.eyJ1Ijoiam9lMTIxMiIsImEiOiJja202cGF1MW8wMWExMnJvMmp5OHdxM3d4In0.lDELUdeujTHCGEySWvQtrA' 
-}).addTo(mymap)
+  }).addTo(mymap);
+  
+
+  
   console.log('mymap',mymap);
 
   return mymap;
@@ -21,8 +24,8 @@ async function dataHandler(mapObjectFromFunction) {
   // and target mapObjectFromFunction to attach markers
   const endpoint = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
   const request = await fetch(endpoint); // Fetch request
-  const zipCode = await request.json(); // Empty array, this replaces the race condition promise chain
-  // from the original tutorial
+  const zipCode = await request.json(); // Empty array, this replaces
+  // the race condition promise chain from the original tutorial
 
   function findMatches(numberToMatch, zipCode) {
     return zipCode.filter((restaurants) => {
@@ -32,14 +35,11 @@ async function dataHandler(mapObjectFromFunction) {
   }
 
   function displayMatches(event) {
-    const matchArray = findMatches(event.target.value, zipCode);
+    const matchArray = findMatches(event.target.value, zipCode);    
     const html = matchArray
       .map((restaurants) => {
         const regex = new RegExp(event.target.value, "gi");
-        const restaurantName = restaurants.name.replace(
-          regex,
-          `<span class="h1">${event.target.value}</span>`
-        ); // Highlights the restaurants name
+        const restaurantName = restaurants.name.replace(regex,`<span class="h1">${event.target.value}</span>`); // Highlights the restaurants name
         return `
           <li>
 				  <span class = "title">${restaurantName}</span>
@@ -47,20 +47,19 @@ async function dataHandler(mapObjectFromFunction) {
 				  <span class = "city">${restaurants.city}</span>
 				  <span class = "category">${restaurants.category}</span>
 				  </li>
-			`;
+			  `;
       }).join('');
       recommendations.innerHTML = html;
   }
   
 
-  const searchInput = document.querySelector(".typehead");
-  const recommendations = document.querySelector(".recommendations");
+  const searchInput = document.querySelector('.typehead');
+  const recommendations = document.querySelector('.recommendations');
 
   searchInput.addEventListener('change', displayMatches);
   searchInput.addEventListener('button', (evt) => {
     displayMatches(evt);
   });
-
   
 
 }
@@ -71,3 +70,13 @@ async function windowActions() {
 }
 
 window.onload = windowActions;
+
+
+/*
+const filtered = restaurants.zip.filter((record) => record.zip.includes(search.value) && record.geocoded_column_1);
+        filtered.forEach(item) => {
+          const longLat = item.geocoded_column_1.coordinates;
+          console.log('markerLonglat', longLat[0], longLat[1]);
+          const marker = L.marker([longLat[1], longLat[0]).addTo(mymap);
+        });
+*/
