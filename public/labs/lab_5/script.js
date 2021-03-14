@@ -27,7 +27,7 @@ async function dataHandler(mapFromLeaflet) {
   // the race condition promise chain from the original tutorial
   
 
-  function findMatches(numberToMatch, zipCode) {
+  function findMatches(numberToMatch) {
     return zipCode.filter((restaurants) => {
       const regex = new RegExp(numberToMatch, 'gi');
       return restaurants.zip.match(regex);
@@ -59,7 +59,7 @@ async function dataHandler(mapFromLeaflet) {
     });
   }
 
-  form.addEventListener("submit", (event) => {
+  form.addEventListener('submit', (event) => {
     event.preventDefault();
     console.log('hi');
     displayMarker(event);
@@ -83,13 +83,3 @@ async function windowActions() {
 }
 
 window.onload = windowActions;
-
-
-/*
-const filtered = restaurants.zip.filter((record) => record.zip.includes(search.value) && record.geocoded_column_1);
-        filtered.forEach(item) => {
-          const longLat = item.geocoded_column_1.coordinates;
-          console.log('markerLonglat', longLat[0], longLat[1]);
-          const marker = L.marker([longLat[1], longLat[0]).addTo(mymap);
-        });
-*/
