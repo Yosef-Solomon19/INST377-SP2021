@@ -97,7 +97,60 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 20);
   }
 
-  
+  function jump() {
+    clearInterval(downTimerId);
+    isJumping = true;
+    upTimerId = setInterval(function () {
+      console.log(startPoint);
+      console.log("1", doodlerBottomSpace);
+      doodlerBottomSpace += 20;
+      doodler.style.bottom = doodlerBottomSpace + "px";
+      console.log("2", doodlerBottomSpace);
+      console.log("s", startPoint);
+      if (doodlerBottomSpace > startPoint + 200) {
+        fall();
+        isJumping = false;
+      }
+    }, 30);
+  }
+
+  function moveLeft() {
+    if (isGoingRight) {
+      clearInterval(rightTimerId);
+      isGoingRight = false;
+    }
+    isGoingLeft = true;
+    leftTimerId = setInterval(function () {
+      if (doodlerLeftSpace >= 0) {
+        console.log("going left");
+        doodlerLeftSpace -= 5;
+        doodler.style.left = doodlerLeftSpace + "px";
+      } else moveRight();
+    }, 20);
+  }
+
+  function moveRight() {
+    if (isGoingLeft) {
+      clearInterval(leftTimerId);
+      isGoingLeft = false;
+    }
+    isGoingRight = true;
+    rightTimerId = setInterval(function () {
+      //changed to 313 to fit doodle image
+      if (doodlerLeftSpace <= 313) {
+        console.log("going right");
+        doodlerLeftSpace += 5;
+        doodler.style.left = doodlerLeftSpace + "px";
+      } else moveLeft();
+    }, 20);
+  }
+
+  function moveStraight() {
+    isGoingLeft = false;
+    isGoingRight = false;
+    clearInterval(leftTimerId);
+    clearInterval(rightTimerId);
+  }  
 
   function gameOver() {
     isGameOver = true;
