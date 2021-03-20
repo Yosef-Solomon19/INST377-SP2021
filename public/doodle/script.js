@@ -150,7 +150,19 @@ document.addEventListener("DOMContentLoaded", () => {
     isGoingRight = false;
     clearInterval(leftTimerId);
     clearInterval(rightTimerId);
-  }  
+  }
+
+  // assign functions to keyCodes
+  function control(e) {
+    doodler.style.bottom = doodlerBottomSpace + "px";
+    if (e.key === "ArrowLeft") {
+      moveLeft();
+    } else if (e.key === "ArrowRight") {
+      moveRight();
+    } else if (e.key === "ArrowUp") {
+      moveStraight();
+    }
+  }
 
   function gameOver() {
     isGameOver = true;
